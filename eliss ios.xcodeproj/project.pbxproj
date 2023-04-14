@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0F2CEB0B1C66B2266BE307A4 /* Pods_eliss_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A029585A211351D3E49009EE /* Pods_eliss_ios.framework */; };
+		2B0B720D29E62D610023F0E3 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B720C29E62D610023F0E3 /* CameraController.swift */; };
+		2B0B720F29E62EC10023F0E3 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B720E29E62EC10023F0E3 /* CameraPreview.swift */; };
 		2B140BCB29E12755007A9A66 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B140BCA29E12755007A9A66 /* CameraView.swift */; };
 		2B140BCD29E139FD007A9A66 /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B140BCC29E139FD007A9A66 /* UIUtilities.swift */; };
+		2B20355E29E818B00065AC4D /* PoseDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B20355D29E818B00065AC4D /* PoseDetect.swift */; };
 		2B49B4A629E04C4800C87DA6 /* eliss_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4A529E04C4800C87DA6 /* eliss_iosApp.swift */; };
 		2B49B4A829E04C4800C87DA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4A729E04C4800C87DA6 /* ContentView.swift */; };
 		2B49B4AA29E04C4A00C87DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B49B4A929E04C4A00C87DA6 /* Assets.xcassets */; };
@@ -41,8 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0B720C29E62D610023F0E3 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		2B0B720E29E62EC10023F0E3 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		2B140BCA29E12755007A9A66 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		2B140BCC29E139FD007A9A66 /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
+		2B20355D29E818B00065AC4D /* PoseDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetect.swift; sourceTree = "<group>"; };
 		2B49B4A229E04C4800C87DA6 /* eliss ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eliss ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B49B4A529E04C4800C87DA6 /* eliss_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eliss_iosApp.swift; sourceTree = "<group>"; };
 		2B49B4A729E04C4800C87DA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 				2B140BCC29E139FD007A9A66 /* UIUtilities.swift */,
 				2B49B4A929E04C4A00C87DA6 /* Assets.xcassets */,
 				2B49B4AB29E04C4A00C87DA6 /* Preview Content */,
+				2B0B720C29E62D610023F0E3 /* CameraController.swift */,
+				2B0B720E29E62EC10023F0E3 /* CameraPreview.swift */,
+				2B20355D29E818B00065AC4D /* PoseDetect.swift */,
 			);
 			path = "eliss ios";
 			sourceTree = "<group>";
@@ -456,8 +465,11 @@
 				2B49B4A829E04C4800C87DA6 /* ContentView.swift in Sources */,
 				2B49B4D229E04EF400C87DA6 /* Camera.swift in Sources */,
 				2B49B4A629E04C4800C87DA6 /* eliss_iosApp.swift in Sources */,
+				2B0B720F29E62EC10023F0E3 /* CameraPreview.swift in Sources */,
 				2B140BCB29E12755007A9A66 /* CameraView.swift in Sources */,
+				2B20355E29E818B00065AC4D /* PoseDetect.swift in Sources */,
 				2B140BCD29E139FD007A9A66 /* UIUtilities.swift in Sources */,
+				2B0B720D29E62D610023F0E3 /* CameraController.swift in Sources */,
 				2B49B4D029E04DE100C87DA6 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

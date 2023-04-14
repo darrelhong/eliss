@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject private var model = DataModel()
 
     var body: some View {
-        CameraView(image: $model.viewfinderImage)
+        CameraPreviewController(dataModel: model)
             .overlay(alignment: .top) {
                 HStack(spacing: 10) {
                     Text("Angle: \($model.debouncedAngle.wrappedValue == nil ? "nil" : String(Int($model.debouncedAngle.wrappedValue!)))")
@@ -19,21 +19,20 @@ struct ContentView: View {
                     Text("Reps: \($model.reps.wrappedValue)")
                     Spacer()
                     Button {
-                        model.camera.switchCaptureDevice()
+                        model.cameraController.switchCamera()
                     } label: {
-                        Label("Switch camera", systemImage: "arrow.triangle.2.circlepath")
+                        Label("Switch camera", systemImage: "arrow.triangle.2.circlepath.camera")
                             .foregroundColor(.white)
                     }
                     .buttonStyle(.plain)
                     .labelStyle(.iconOnly)
                 }
-                .font(.system(size: 16))
                 .padding()
+                .font(.system(size: 16))
                 .background(.black.opacity(0.65))
             }
-            .task {
-                await model.camera.start()
-            }
+            .ignoresSafeArea()
+            .statusBar(hidden: true)
     }
 }
 
