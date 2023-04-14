@@ -14,17 +14,18 @@ struct ContentView: View {
         CameraView(image: $model.viewfinderImage)
             .overlay(alignment: .top) {
                 HStack(spacing: 60) {
+                    Text("Angle: \(Int($model.situpAngle.wrappedValue ?? 0))")
                     Spacer()
                     Button {
                         model.camera.switchCaptureDevice()
                     } label: {
                         Label("Switch camera", systemImage: "arrow.triangle.2.circlepath")
-                            .font(.system(size: 16))
                             .foregroundColor(.white)
                     }
                     .buttonStyle(.plain)
                     .labelStyle(.iconOnly)
                 }
+                .font(.system(size: 16))
                 .padding()
                 .background(.black.opacity(0.65))
             }

@@ -87,6 +87,14 @@ class Camera: NSObject {
         return orientation
     }
     
+    private var addToPoseStream: ((Pose) -> Void)?
+    
+    lazy var poseStream: AsyncStream<Pose> = AsyncStream { contiuation in
+        addToPoseStream = { pose in
+            contiuation.yield(pose)
+        }
+    }
+    
     private var addToPreviewStream: ((CIImage) -> Void)?
     
     var isPreviewPaused = false
@@ -278,14 +286,13 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
             results = try poseDetector.results(in: visionImage)
         } catch {
             logger.error("Failed to detect pose with error: \(error.localizedDescription).")
-            return
         }
-        guard !results.isEmpty else {
+        if !results.isEmpty {
+            addToPoseStream?(results[0])
+        } else {
             logger.error("Pose detector returned no results.")
-            return
         }
         
-   
         addToPreviewStream?(CIImage(cvPixelBuffer: pixelBuffer))
     }
 }

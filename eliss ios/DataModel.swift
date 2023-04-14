@@ -6,6 +6,8 @@
 //
 
 import AVFoundation
+import Combine
+import MLKit
 import os.log
 import SwiftUI
 
@@ -13,10 +15,33 @@ final class DataModel: ObservableObject {
     let camera = Camera()
     
     @Published var viewfinderImage: Image?
+    @Published var situpAngle: CGFloat?    
+
+    private func calculateAngle(_ left: PoseLandmark, _ mid: PoseLandmark, _ right: PoseLandmark) -> CGFloat {
+        let dx1 = left.position.x - mid.position.x
+        let dy1 = left.position.y - mid.position.y
+        let dx2 = right.position.x - mid.position.x
+        let dy2 = right.position.y - mid.position.y
+            
+        let angle1 = atan2(dy1, dx1)
+        let angle2 = atan2(dy2, dx2)
+            
+        var angleDegrees = (angle1 - angle2) * 180 / .pi
+            
+        if angleDegrees < 0 {
+            angleDegrees += 360
+        }
+            
+        return angleDegrees
+    }
     
     init() {
+       
         Task {
             await handleCameraPreviews()
+        }
+        Task {
+            await handlePoseResults()
         }
     }
     
@@ -26,6 +51,20 @@ final class DataModel: ObservableObject {
         for await image in imageStream {
             Task { @MainActor in
                 viewfinderImage = image
+            }
+        }
+    }
+    
+    func handlePoseResults() async {
+        let poseStream = camera.poseStream
+        
+        for await pose in poseStream {
+            Task { @MainActor in
+                let rightShoulderPose = pose.landmark(ofType: PoseLandmarkType.rightShoulder)
+                let rightHipPose = pose.landmark(ofType: PoseLandmarkType.rightHip)
+                let rightKneePose = pose.landmark(ofType: PoseLandmarkType.rightKnee)
+                
+                situpAngle = calculateAngle(rightShoulderPose, rightHipPose, rightKneePose)
             }
         }
     }
