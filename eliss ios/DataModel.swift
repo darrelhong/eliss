@@ -11,6 +11,8 @@ import MLKit
 import os.log
 import SwiftUI
 
+let InFrameLikelihoodThreshold: Float = 0.8
+
 enum RepPosition : String {
     case up, down
 }
@@ -19,7 +21,7 @@ final class DataModel: ObservableObject {
     let camera = Camera()
     
     @Published var viewfinderImage: Image?
-    @Published var situpAngle: CGFloat?
+    @Published var situpAngle: CGFloat? 
     @Published var debouncedAngle: CGFloat?
     @Published var reps: Int = 0
     @Published var repPosition: RepPosition = RepPosition.down
@@ -87,11 +89,16 @@ final class DataModel: ObservableObject {
                 let rightHipPose = pose.landmark(ofType: PoseLandmarkType.rightHip)
                 let rightKneePose = pose.landmark(ofType: PoseLandmarkType.rightKnee)
                 
-                let angle = calculateAngle(rightShoulderPose, rightHipPose, rightKneePose)
                 
-                update(angle)
-                
-                situpAngle = angle
+                if (rightShoulderPose.inFrameLikelihood > InFrameLikelihoodThreshold && rightHipPose.inFrameLikelihood > InFrameLikelihoodThreshold && rightKneePose.inFrameLikelihood > InFrameLikelihoodThreshold) {
+                    let angle = calculateAngle(rightShoulderPose, rightHipPose, rightKneePose)
+                    
+                    update(angle)
+                    
+                    situpAngle = angle
+                } else {
+                    situpAngle = nil
+                }
             }
         }
     }

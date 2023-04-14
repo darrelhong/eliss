@@ -14,7 +14,7 @@ struct ContentView: View {
         CameraView(image: $model.viewfinderImage)
             .overlay(alignment: .top) {
                 HStack(spacing: 10) {
-                    Text("Angle: \(Int($model.debouncedAngle.wrappedValue ?? 0))")
+                    Text("Angle: \($model.debouncedAngle.wrappedValue == nil ? "nil" : String(Int($model.debouncedAngle.wrappedValue!)))")
                     Text("State: \($model.repPosition.wrappedValue.rawValue)")
                     Text("Reps: \($model.reps.wrappedValue)")
                     Spacer()
