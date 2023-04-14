@@ -11,12 +11,18 @@ import MLKit
 import os.log
 import SwiftUI
 
+enum RepPosition : String {
+    case up, down
+}
+
 final class DataModel: ObservableObject {
     let camera = Camera()
     
     @Published var viewfinderImage: Image?
     @Published var situpAngle: CGFloat?
     @Published var debouncedAngle: CGFloat?
+    @Published var reps: Int = 0
+    @Published var repPosition: RepPosition = RepPosition.down
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -36,6 +42,15 @@ final class DataModel: ObservableObject {
         }
             
         return angleDegrees
+    }
+    
+    private func update(_ angle: CGFloat) {
+        if angle > 110 {
+            self.repPosition = RepPosition.down
+        } else if angle < 40 && self.repPosition == RepPosition.down {
+            self.reps += 1
+            self.repPosition = RepPosition.up
+        }
     }
     
     init() {
@@ -72,7 +87,11 @@ final class DataModel: ObservableObject {
                 let rightHipPose = pose.landmark(ofType: PoseLandmarkType.rightHip)
                 let rightKneePose = pose.landmark(ofType: PoseLandmarkType.rightKnee)
                 
-                situpAngle = calculateAngle(rightShoulderPose, rightHipPose, rightKneePose)
+                let angle = calculateAngle(rightShoulderPose, rightHipPose, rightKneePose)
+                
+                update(angle)
+                
+                situpAngle = angle
             }
         }
     }
