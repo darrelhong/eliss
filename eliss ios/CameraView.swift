@@ -2,7 +2,7 @@
 //  CameraView.swift
 //  eliss ios
 //
-//  Created by ByteDance on 8/4/23.
+//  Created by darrelhong on 8/4/23.
 //
 
 import SwiftUI

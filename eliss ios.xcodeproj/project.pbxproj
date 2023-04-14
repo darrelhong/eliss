@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2CEB0B1C66B2266BE307A4 /* Pods_eliss_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A029585A211351D3E49009EE /* Pods_eliss_ios.framework */; };
 		2B140BCB29E12755007A9A66 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B140BCA29E12755007A9A66 /* CameraView.swift */; };
+		2B140BCD29E139FD007A9A66 /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B140BCC29E139FD007A9A66 /* UIUtilities.swift */; };
 		2B49B4A629E04C4800C87DA6 /* eliss_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4A529E04C4800C87DA6 /* eliss_iosApp.swift */; };
 		2B49B4A829E04C4800C87DA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4A729E04C4800C87DA6 /* ContentView.swift */; };
 		2B49B4AA29E04C4A00C87DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B49B4A929E04C4A00C87DA6 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 		2B49B4C329E04C4A00C87DA6 /* eliss_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4C229E04C4A00C87DA6 /* eliss_iosUITestsLaunchTests.swift */; };
 		2B49B4D029E04DE100C87DA6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4CF29E04DE100C87DA6 /* DataModel.swift */; };
 		2B49B4D229E04EF400C87DA6 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49B4D129E04EF400C87DA6 /* Camera.swift */; };
+		F3EBE2D07A8A64FE548E3A50 /* Pods_eliss_ios_eliss_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33342BDE8272A4D6DFAF7A8E /* Pods_eliss_ios_eliss_iosUITests.framework */; };
+		F66DFDCCB4489CF48A8D0514 /* Pods_eliss_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A918230DEC719360B849F3B5 /* Pods_eliss_iosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		2B140BCA29E12755007A9A66 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		2B140BCC29E139FD007A9A66 /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
 		2B49B4A229E04C4800C87DA6 /* eliss ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eliss ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B49B4A529E04C4800C87DA6 /* eliss_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eliss_iosApp.swift; sourceTree = "<group>"; };
 		2B49B4A729E04C4800C87DA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +55,15 @@
 		2B49B4C229E04C4A00C87DA6 /* eliss_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eliss_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2B49B4CF29E04DE100C87DA6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		2B49B4D129E04EF400C87DA6 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		33342BDE8272A4D6DFAF7A8E /* Pods_eliss_ios_eliss_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eliss_ios_eliss_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3BB4064EC3F5BE4E6D9184 /* Pods-eliss ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss ios.debug.xcconfig"; path = "Target Support Files/Pods-eliss ios/Pods-eliss ios.debug.xcconfig"; sourceTree = "<group>"; };
+		769B17AEC4FDB9BE9F125730 /* Pods-eliss ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss ios.release.xcconfig"; path = "Target Support Files/Pods-eliss ios/Pods-eliss ios.release.xcconfig"; sourceTree = "<group>"; };
+		A029585A211351D3E49009EE /* Pods_eliss_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eliss_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A918230DEC719360B849F3B5 /* Pods_eliss_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eliss_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABBE423ABA95E181CD85E0F /* Pods-eliss iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss iosTests.release.xcconfig"; path = "Target Support Files/Pods-eliss iosTests/Pods-eliss iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0F31DB91C6DB58BA5FF271B /* Pods-eliss ios-eliss iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss ios-eliss iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2E5290575A41CE4EDF5D4AD /* Pods-eliss ios-eliss iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss ios-eliss iosUITests.release.xcconfig"; path = "Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E8A7B3E39371FE95034D912C /* Pods-eliss iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eliss iosTests.debug.xcconfig"; path = "Target Support Files/Pods-eliss iosTests/Pods-eliss iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2CEB0B1C66B2266BE307A4 /* Pods_eliss_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66DFDCCB4489CF48A8D0514 /* Pods_eliss_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EBE2D07A8A64FE548E3A50 /* Pods_eliss_ios_eliss_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +101,8 @@
 				2B49B4B529E04C4A00C87DA6 /* eliss iosTests */,
 				2B49B4BF29E04C4A00C87DA6 /* eliss iosUITests */,
 				2B49B4A329E04C4800C87DA6 /* Products */,
+				3CC5CA95984A6D260B14A504 /* Pods */,
+				F1ED69B9177725219CE89DAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +124,7 @@
 				2B140BCA29E12755007A9A66 /* CameraView.swift */,
 				2B49B4CF29E04DE100C87DA6 /* DataModel.swift */,
 				2B49B4D129E04EF400C87DA6 /* Camera.swift */,
+				2B140BCC29E139FD007A9A66 /* UIUtilities.swift */,
 				2B49B4A929E04C4A00C87DA6 /* Assets.xcassets */,
 				2B49B4AB29E04C4A00C87DA6 /* Preview Content */,
 			);
@@ -136,6 +156,29 @@
 			path = "eliss iosUITests";
 			sourceTree = "<group>";
 		};
+		3CC5CA95984A6D260B14A504 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E3BB4064EC3F5BE4E6D9184 /* Pods-eliss ios.debug.xcconfig */,
+				769B17AEC4FDB9BE9F125730 /* Pods-eliss ios.release.xcconfig */,
+				D0F31DB91C6DB58BA5FF271B /* Pods-eliss ios-eliss iosUITests.debug.xcconfig */,
+				D2E5290575A41CE4EDF5D4AD /* Pods-eliss ios-eliss iosUITests.release.xcconfig */,
+				E8A7B3E39371FE95034D912C /* Pods-eliss iosTests.debug.xcconfig */,
+				AABBE423ABA95E181CD85E0F /* Pods-eliss iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1ED69B9177725219CE89DAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A029585A211351D3E49009EE /* Pods_eliss_ios.framework */,
+				33342BDE8272A4D6DFAF7A8E /* Pods_eliss_ios_eliss_iosUITests.framework */,
+				A918230DEC719360B849F3B5 /* Pods_eliss_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B49B4C629E04C4A00C87DA6 /* Build configuration list for PBXNativeTarget "eliss ios" */;
 			buildPhases = (
+				07A250C7479754DD2D285F0D /* [CP] Check Pods Manifest.lock */,
 				2B49B49E29E04C4800C87DA6 /* Sources */,
 				2B49B49F29E04C4800C87DA6 /* Frameworks */,
 				2B49B4A029E04C4800C87DA6 /* Resources */,
+				946160917B65AD61700BF1B4 /* [CP] Embed Pods Frameworks */,
+				3E44DC6AE6259AF86C9EED96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B49B4C929E04C4A00C87DA6 /* Build configuration list for PBXNativeTarget "eliss iosTests" */;
 			buildPhases = (
+				1917245B4FBA2A00A40DB5EB /* [CP] Check Pods Manifest.lock */,
 				2B49B4AE29E04C4A00C87DA6 /* Sources */,
 				2B49B4AF29E04C4A00C87DA6 /* Frameworks */,
 				2B49B4B029E04C4A00C87DA6 /* Resources */,
@@ -178,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B49B4CC29E04C4A00C87DA6 /* Build configuration list for PBXNativeTarget "eliss iosUITests" */;
 			buildPhases = (
+				F4C1F4D1EC368DB4D5072C13 /* [CP] Check Pods Manifest.lock */,
 				2B49B4B829E04C4A00C87DA6 /* Sources */,
 				2B49B4B929E04C4A00C87DA6 /* Frameworks */,
 				2B49B4BA29E04C4A00C87DA6 /* Resources */,
+				952F1080DAFD97F9B7712EEF /* [CP] Embed Pods Frameworks */,
+				9C5C2F074D39A90474581930 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +311,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07A250C7479754DD2D285F0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eliss ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1917245B4FBA2A00A40DB5EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eliss iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E44DC6AE6259AF86C9EED96 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		946160917B65AD61700BF1B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eliss ios/Pods-eliss ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		952F1080DAFD97F9B7712EEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5C2F074D39A90474581930 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eliss ios-eliss iosUITests/Pods-eliss ios-eliss iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C1F4D1EC368DB4D5072C13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eliss ios-eliss iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B49B49E29E04C4800C87DA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,6 +457,7 @@
 				2B49B4D229E04EF400C87DA6 /* Camera.swift in Sources */,
 				2B49B4A629E04C4800C87DA6 /* eliss_iosApp.swift in Sources */,
 				2B140BCB29E12755007A9A66 /* CameraView.swift in Sources */,
+				2B140BCD29E139FD007A9A66 /* UIUtilities.swift in Sources */,
 				2B49B4D029E04DE100C87DA6 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +611,7 @@
 		};
 		2B49B4C729E04C4A00C87DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E3BB4064EC3F5BE4E6D9184 /* Pods-eliss ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +643,7 @@
 		};
 		2B49B4C829E04C4A00C87DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 769B17AEC4FDB9BE9F125730 /* Pods-eliss ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -485,6 +675,7 @@
 		};
 		2B49B4CA29E04C4A00C87DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A7B3E39371FE95034D912C /* Pods-eliss iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +696,7 @@
 		};
 		2B49B4CB29E04C4A00C87DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABBE423ABA95E181CD85E0F /* Pods-eliss iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +717,7 @@
 		};
 		2B49B4CD29E04C4A00C87DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0F31DB91C6DB58BA5FF271B /* Pods-eliss ios-eliss iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +736,7 @@
 		};
 		2B49B4CE29E04C4A00C87DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2E5290575A41CE4EDF5D4AD /* Pods-eliss ios-eliss iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

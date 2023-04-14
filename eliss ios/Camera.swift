@@ -7,8 +7,9 @@
 
 import AVFoundation
 import CoreImage
-import UIKit
+import MLKit
 import os.log
+import UIKit
 
 class Camera: NSObject {
     private let captureSession = AVCaptureSession()
@@ -16,6 +17,8 @@ class Camera: NSObject {
     private var deviceInput: AVCaptureDeviceInput?
     private var videoOutput: AVCaptureVideoDataOutput?
     private var sessionQueue: DispatchQueue!
+    
+    private var poseDetector: PoseDetector = .poseDetector(options: AccuratePoseDetectorOptions())
 
     private var allCaptureDevices: [AVCaptureDevice] {
         AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera, .builtInDualCamera, .builtInDualWideCamera, .builtInWideAngleCamera, .builtInDualWideCamera], mediaType: .video, position: .unspecified).devices
@@ -261,16 +264,33 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
         
         if connection.isVideoOrientationSupported,
-           let videoOrientation = videoOrientationFor(deviceOrientation) {
+           let videoOrientation = videoOrientationFor(deviceOrientation)
+        {
             connection.videoOrientation = videoOrientation
         }
         
+        let visionImage = VisionImage(buffer: sampleBuffer)
+        let orientation = UIUtilities.imageOrientation(fromDevicePosition: isUsingFrontCaptureDevice ? .front : .back, deviceOrientation: deviceOrientation)
+        visionImage.orientation = orientation
+        
+        var results: [Pose] = []
+        do {
+            results = try poseDetector.results(in: visionImage)
+        } catch {
+            logger.error("Failed to detect pose with error: \(error.localizedDescription).")
+            return
+        }
+        guard !results.isEmpty else {
+            logger.error("Pose detector returned no results.")
+            return
+        }
+        
+   
         addToPreviewStream?(CIImage(cvPixelBuffer: pixelBuffer))
     }
 }
 
-fileprivate extension UIScreen {
-
+private extension UIScreen {
     var orientation: UIDeviceOrientation {
         let point = coordinateSpace.convert(CGPoint.zero, to: fixedCoordinateSpace)
         if point == CGPoint.zero {
@@ -278,9 +298,9 @@ fileprivate extension UIScreen {
         } else if point.x != 0 && point.y != 0 {
             return .portraitUpsideDown
         } else if point.x == 0 && point.y != 0 {
-            return .landscapeRight //.landscapeLeft
+            return .landscapeRight // .landscapeLeft
         } else if point.x != 0 && point.y == 0 {
-            return .landscapeLeft //.landscapeRight
+            return .landscapeLeft // .landscapeRight
         } else {
             return .unknown
         }
