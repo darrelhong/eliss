@@ -14,7 +14,7 @@ struct ContentView: View {
         CameraView(image: $model.viewfinderImage)
             .overlay(alignment: .top) {
                 HStack(spacing: 60) {
-                    Text("Angle: \(Int($model.situpAngle.wrappedValue ?? 0))")
+                    Text("Angle: \(Int($model.debouncedAngle.wrappedValue ?? 0))")
                     Spacer()
                     Button {
                         model.camera.switchCaptureDevice()

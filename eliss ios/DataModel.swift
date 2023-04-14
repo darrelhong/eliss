@@ -15,7 +15,10 @@ final class DataModel: ObservableObject {
     let camera = Camera()
     
     @Published var viewfinderImage: Image?
-    @Published var situpAngle: CGFloat?    
+    @Published var situpAngle: CGFloat?
+    @Published var debouncedAngle: CGFloat?
+    
+    private var cancellables = Set<AnyCancellable>()
 
     private func calculateAngle(_ left: PoseLandmark, _ mid: PoseLandmark, _ right: PoseLandmark) -> CGFloat {
         let dx1 = left.position.x - mid.position.x
@@ -36,7 +39,12 @@ final class DataModel: ObservableObject {
     }
     
     init() {
-       
+        $situpAngle.throttle(for: .milliseconds(250), scheduler: DispatchQueue.main, latest: true)
+            .sink(receiveValue: { [weak self] a in
+                self?.debouncedAngle = a
+            })
+            .store(in: &cancellables)
+                
         Task {
             await handleCameraPreviews()
         }
