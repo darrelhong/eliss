@@ -39,12 +39,13 @@ class Camera: NSObject {
         #if os(macOS) || (os(iOS) && targetEnvironment(macCatalyst))
         devices += allCaptureDevices
         #else
-        if let backDevice = backCaptureDevices.first {
-            devices += [backDevice]
-        }
         if let frontDevice = frontCaptureDevices.first {
             devices += [frontDevice]
         }
+        if let backDevice = backCaptureDevices.first {
+            devices += [backDevice]
+        }
+       
         #endif
         return devices
     }
